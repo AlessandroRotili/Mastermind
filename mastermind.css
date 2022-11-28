@@ -1,0 +1,41 @@
+#board{
+    display: grid;
+    grid-template-areas:
+        "guess ."
+        "try check" 
+        "try check" 
+        "try check" 
+        "try check" 
+        "try check" 
+        "try check" 
+        "try check" 
+        "try check" 
+        "try check" 
+        "try check" 
+        "options ."; 
+    background-color: blue;
+}
+
+#tries{
+    grid-area: try;
+    background-color: red;
+}
+
+#options{
+    grid-area: options;
+    background-color: yellow;
+}
+
+#checks{
+    grid-area: check;
+    background-color: green;
+}
+
+button{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border: 1px solid white;
+    
+}
