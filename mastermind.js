@@ -77,12 +77,22 @@ function check() {
         checkButtons[i].style.backgroundColor= tempArray[i];
     }
 
-    checkButtons = document.getElementById('check'+ turn).getElementsByTagName('button');
+    
     if(victory()){
         displayMisterySequence();
-    }
-    
+    } else if (turn > 9) {
+        alert('GAME-OVER');
+    } 
+
 }
+
+function currentTurn() {
+    var trydiv = document.getElementById('try' + turn);
+    var checkdiv = document.getElementById('check'+ turn);
+    trydiv.style.backgroundColor = 'pink';
+    checkdiv.style.backgroundColor = 'pink';
+}
+
 
 function victory(){
     checkButtons = document.getElementById('check'+ turn).getElementsByTagName('button');
@@ -103,6 +113,7 @@ window.onload=() => {
     GenerateMisterySequence();
     deactivateTryButton();
     activateTryButtons();
+    currentTurn();
 }    
 
 
@@ -147,6 +158,7 @@ validateButton.onclick= ()=>{
         checkButtons = document.getElementById('check'+ turn).getElementsByTagName('button');
         tryButtons = document.getElementById('try' + turn).getElementsByTagName('button');
         activateTryButtons();
+        currentTurn();
     } else {
         alert("devi selezionare 4 colori");
     }
