@@ -5,9 +5,12 @@ var turn = 1;
 var defaultColor;
 
 var misterySequenceButtons = document.getElementById('guess').getElementsByTagName('button');
-const optionsButtons = document.getElementById('options').getElementsByTagName('button');
-const tryButtons = document.getElementById('try' + turn).getElementsByTagName('button');
-const buttonCheck = document.getElementById('btn-check');
+var optionsButtons = document.getElementById('options').getElementsByTagName('button');
+var validateButton = document.getElementById('btn-check');
+
+
+var tryButtons = document.getElementById('try' + turn).getElementsByTagName('button');
+var checkButtons = document.getElementById('check'+ turn).getElementsByTagName('button');
 
 // const Colors = {
 // 	Red: "rgb(255, 0, 0)",
@@ -51,7 +54,13 @@ function displayMisterySequence() {
 }
 
 function check() {
-    
+    for(let i = 0; i < tryButtons.length; i++) {
+        let color = window.getComputedStyle(tryButtons[i]).getPropertyValue("background-color");
+        if(misterySequence[i] == color) {
+            checkButtons[i].style.backgroundColor= 'red';
+        }
+        
+    }
 }
 
 
@@ -60,6 +69,8 @@ window.onload=() => {
     defaultColor =  window.getComputedStyle(tryButtons[0]).getPropertyValue("background-color");
     GenerateMisterySequence();
     displayMisterySequence();
+    deactivateTryButton();
+    activateTryButtons();
 }    
 
 
@@ -70,24 +81,51 @@ for(let button of optionsButtons){
     }
 }
 
-
-for(let button of tryButtons){
-    button.onclick=()=>{
-        button.style.backgroundColor = colorSelected;
-        colorSelected = NaN;
+function deactivateTryButton() {
+    let allTryButtons = document.getElementById('tries').getElementsByTagName('button');
+    for ( let button of allTryButtons) {
+        button.disabled = true;
     }
 }
 
-buttonCheck.onclick= ()=>{
-    for(let button of tryButtons) {
-        if (window.getComputedStyle(button).getPropertyValue("background-color") == defaultColor) {
-            alert("devi selezionare 4 colori");
-            break;
+function activateTryButtons() {
+    for(let button of tryButtons){
+        button.disabled = false;
+        button.onclick=()=>{
+            button.style.backgroundColor = colorSelected;
+            colorSelected = NaN;
         }
-    }    
+    }
+
+    if(turn > 1) {
+
+        let oldTryButtons =document.getElementById('try' + (turn - 1)).getElementsByTagName('button');
+        
+        for(let button of oldTryButtons){
+            button.disabled = true;
+        }
+    }
 }
 
+validateButton.onclick= ()=>{
+    
+    if (isSequenceValid()) {
+        check();
+        turn++;
+        checkButtons = document.getElementById('check'+ turn).getElementsByTagName('button');
+        tryButtons = document.getElementById('try' + turn).getElementsByTagName('button');
+        activateTryButtons();
+    } else {
+        alert("devi selezionare 4 colori");
+    }
+}
 
-const value3 = document.getElementById('');
-
+function isSequenceValid() {
+    for(let button of tryButtons) {
+        if (window.getComputedStyle(button).getPropertyValue("background-color") == defaultColor) {
+            return false;
+        }         
+    }
+    return true;    
+}
 
