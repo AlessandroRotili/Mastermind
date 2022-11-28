@@ -1,155 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./mastermind.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./mastermind.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="board">
-        <div id="guess">
-            <button disabled></button>
-            <button disabled></button>
-            <button disabled></button>
-            <button disabled></button>
+      <button id="btn-check">Check</button>
+      <div id="guess">
+        <button disabled></button>
+        <button disabled></button>
+        <button disabled></button>
+        <button disabled></button>
+      </div>
+      <div id="tries">
+        <div id="try10">
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
         </div>
-        <div id="tries">
-            <div id="try10">
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-            </div>
-            <div id="try9">
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-            </div>
-            <div id="try8">
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-            </div>
-            <div id="try7">
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-            </div>
-            <div id="try6">
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-            </div>
-            <div id="try5">
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-            </div>
-            <div id="try4">
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-            </div>
-            <div id="try3">
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-            </div>
-            <div id="try2">
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-            </div>
-            <div id="try1">
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-            </div>
+        <div id="try9">
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
         </div>
-        <div id="options">
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
+        <div id="try8">
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
         </div>
-        <div id="checks">
-            <div id="check10">
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-            </div>
-            <div id="check9">
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-            </div>
-            <div id="check8">
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-            </div>
-            <div id="check7">
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-            </div>
-            <div id="check6">
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-            </div>
-            <div id="check5">
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-            </div>
-            <div id="check4">
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-            </div>
-            <div id="check3">
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-            </div>
-            <div id="check2">
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-            </div>
-            <div id="check1">
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-                <button class="btn-check"></button>
-            </div>
+        <div id="try7">
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
         </div>
+        <div id="try6">
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+        <div id="try5">
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+        <div id="try4">
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+        <div id="try3">
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+        <div id="try2">
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+        <div id="try1">
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+      </div>
+      <div id="options">
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+      </div>
+
+      <div id="checks">
+        <div id="check10">
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+        </div>
+        <div id="check9">
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+        </div>
+        <div id="check8">
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+        </div>
+        <div id="check7">
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+        </div>
+        <div id="check6">
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+        </div>
+        <div id="check5">
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+        </div>
+        <div id="check4">
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+        </div>
+        <div id="check3">
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+        </div>
+        <div id="check2">
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+        </div>
+        <div id="check1">
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+          <button class="btn-check"></button>
+        </div>
+      </div>
     </div>
     <script src="./mastermind.js"></script>
-</body>
+  </body>
 </html>
