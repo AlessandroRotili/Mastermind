@@ -54,13 +54,46 @@ function displayMisterySequence() {
 }
 
 function check() {
+    let tempArray = [];
     for(let i = 0; i < tryButtons.length; i++) {
         let color = window.getComputedStyle(tryButtons[i]).getPropertyValue("background-color");
         if(misterySequence[i] == color) {
-            checkButtons[i].style.backgroundColor= 'red';
-        }
-        
+            tempArray.unshift('rgb(255, 0, 0)');
+        } else {
+            for(let j = 0; j < misterySequence.length; j++) {
+                if(misterySequence[j] == color && i != j) {
+                    tempArray.push('rgb(255, 255, 255)');
+                }
+            }
+        }   
     }
+    if(tempArray.length<4){
+        for(let i = 0; i < 4 - tempArray.length; i++){
+            tempArray.push('rgb(0, 0, 0)');
+        }
+    }
+
+    for(let i = 0; i < checkButtons.length; i++) {
+        checkButtons[i].style.backgroundColor= tempArray[i];
+    }
+
+    checkButtons = document.getElementById('check'+ turn).getElementsByTagName('button');
+    if(victory()){
+        displayMisterySequence();
+    }
+    
+}
+
+function victory(){
+    checkButtons = document.getElementById('check'+ turn).getElementsByTagName('button');
+    console.log(checkButtons);
+    for(let i = 0; i < checkButtons.length; i++) {
+        console.log(window.getComputedStyle(checkButtons[i]).getPropertyValue("background-color")+ 'ciao'); 
+        if(window.getComputedStyle(checkButtons[i]).getPropertyValue("background-color") != 'rgb(255, 0, 0)') {
+            return false;
+        }
+    }
+    return true;
 }
 
 
@@ -68,7 +101,6 @@ function check() {
 window.onload=() => {
     defaultColor =  window.getComputedStyle(tryButtons[0]).getPropertyValue("background-color");
     GenerateMisterySequence();
-    displayMisterySequence();
     deactivateTryButton();
     activateTryButtons();
 }    

@@ -62,8 +62,8 @@ body {
 }
 
 button {
-  background-color: #000000;
-  color: #000000;
+  background-color: rgb(0,0,0);
+  color: rgb(0,0,0);
   border: none;
   border-radius: 50%;
   height: 30px;
@@ -83,6 +83,7 @@ button:active {
   width: 10px;
   height: 12px;
   margin: 1px;
+  background-color: rgb(0,0,0);
 }
 
 #red {
