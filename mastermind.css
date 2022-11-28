@@ -1,49 +1,59 @@
-#board{
-    display: grid;
-    grid-template-areas:
-        "guess ."
-        "try check" 
-        "try check" 
-        "try check" 
-        "try check" 
-        "try check" 
-        "try check" 
-        "try check" 
-        "try check" 
-        "try check" 
-        "try check" 
-        "options ."; 
-    background-color: blue;
+#board {
+  display: grid;
+  grid-template-areas:
+    "guess ."
+    "try check"
+    "try check"
+    "try check"
+    "try check"
+    "try check"
+    "try check"
+    "try check"
+    "try check"
+    "try check"
+    "try check"
+    "options .";
+  background-color: blue;
 }
 
-#tries{
-    grid-area: try;
-    background-color: red;
+#tries {
+  grid-area: try;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
 }
 
-#options{
-    grid-area: options;
-    background-color: yellow;
+#options {
+  grid-area: options;
+  background-color: yellow;
 }
 
-#checks{
-    grid-area: check;
-    background-color: green;
+#checks {
+  display: grid;
+  grid-area: check;
+  background-color: green;
 }
 
-button{
-    background-color: #48abe0;
-    color: #48abe0;
-    border: none;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    box-shadow: 0 2px 4px darkslategray;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  
-  button:active  {
-      background-color: #ff0000;
-      color: #ff0000;
-  }
+button {
+  background-color: #000000;
+  color: #000000;
+  border: none;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  box-shadow: 0 2px 4px darkslategray;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 3px;
+}
+
+button:active {
+  background-color: #ff0000;
+  color: #ff0000;
+}
+
+.btn-check {
+  width: 10px;
+  height: 12px;
+  margin: 1px;
+}
