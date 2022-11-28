@@ -92,7 +92,7 @@ function currentTurn() {
     var checkDiv = document.getElementById('check'+ turn);
     tryDiv.style.backgroundColor = 'pink';
     checkDiv.style.backgroundColor = 'pink';
-    // tryDiv.style.backgroundColor = 'rgb(211, 138, 205, 0.4)';
+    // tryDiv.style.backgroundColor = 'rgb(211, 138, 205, 0.4)'; non funziona il metodo d selezione qui sotto se uso questi
     // checkDiv.style.backgroundColor = 'rgb(211, 138, 205, 0.4)';
     
     if(turn > 1) {
