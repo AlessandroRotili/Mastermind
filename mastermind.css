@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Sono:wght@500&display=swap");
+
+@import url("https://fonts.cdnfonts.com/css/games");
+
 body {
   margin: 0;
   height: 100vh;
@@ -7,6 +10,25 @@ body {
   background-position: bottom;
   background-repeat: no-repeat;
   font-family: "Sono", sans-serif;
+}
+
+header{
+    display: flex;
+    background-color: #5500ff;
+    height: 10%;
+    align-items: baseline;
+    border-bottom: solid #000000;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+  font-family: "Games", sans-serif;
+  text-align: center;
+  margin-bottom: 5%;
+  width: auto;
+  font-size:7ex;
+  box-shadow: slateblue;
 }
 #board {
   display: grid;
@@ -29,6 +51,8 @@ body {
 }
 
 #guess {
+  display: flex;
+  justify-content: space-around;
   background-color: rgb(233, 248, 248);
 }
 
@@ -38,6 +62,11 @@ body {
   display: flex;
   flex-direction: column;
   border: solid;
+}
+
+#tries > div {
+  display: flex;
+  justify-content: space-around;
 }
 
 #btn-check {
@@ -62,8 +91,8 @@ body {
 }
 
 button {
-  background-color: rgb(0,0,0);
-  color: rgb(0,0,0);
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   border: none;
   border-radius: 50%;
   height: 30px;
@@ -75,15 +104,16 @@ button {
 }
 
 button:active {
-  background-color: #ff0000;
-  color: #ff0000;
+  background-color: #262626;
+  height: 40px;
+  width: 40px;
 }
 
 .btn-check {
   width: 10px;
   height: 12px;
   margin: 1px;
-  background-color: rgb(0,0,0);
+  background-color: rgb(0, 0, 0);
 }
 
 #red {
@@ -130,7 +160,7 @@ footer {
 }
 #p-nero {
   font-weight: 600;
-  background-color: aliceblue;
+  background-color: rgb(255, 240, 254);
 }
 #p-bianco {
   font-weight: 600;
@@ -142,4 +172,11 @@ footer {
   font-weight: 600;
   color: #fcfcfc;
   background-color: #ff0000;
+}
+#copyright{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5%;
+    font-style: oblique;
 }
