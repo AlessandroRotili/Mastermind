@@ -89,8 +89,8 @@ function check() {
 function currentTurn() {
     var trydiv = document.getElementById('try' + turn);
     var checkdiv = document.getElementById('check'+ turn);
-    trydiv.style.backgroundColor = 'pink';
-    checkdiv.style.backgroundColor = 'pink';
+    trydiv.style.backgroundColor = 'rgb(211, 138, 205, 0.4)';
+    checkdiv.style.backgroundColor = 'rgb(211, 138, 205, 0.4)';
 }
 
 
