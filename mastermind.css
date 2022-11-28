@@ -1,9 +1,13 @@
-body{
-    margin: 0;
-    height: 100vh;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Sono:wght@500&display=swap");
+body {
+  margin: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  background-image: url(https://secretlabinstitute.files.wordpress.com/2021/02/galaxy-brain-m-stage-3.png?w=1200);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  font-family: "Sono", sans-serif;
 }
-
 #board {
   display: grid;
   grid-template-areas:
@@ -22,11 +26,10 @@ body{
   background-color: blue;
   background-image: url(https://i.ytimg.com/vi/6CJUQr4Vs40/maxresdefault.jpg);
   background-position: center;
-
 }
 
-#guess{
-    background-color: rgb(233, 248, 248);
+#guess {
+  background-color: rgb(233, 248, 248);
 }
 
 #tries {
@@ -37,14 +40,13 @@ body{
   border: solid;
 }
 
-#btn-check{
-    text-align: center;
-    grid-area: checkbtn;
-    background-color: white;
-    border-radius:0;
-    width: auto;
-    margin: 5%;
-
+#btn-check {
+  text-align: center;
+  grid-area: checkbtn;
+  background-color: white;
+  border-radius: 0;
+  width: auto;
+  margin: 5%;
 }
 #options {
   grid-area: options;
@@ -84,33 +86,59 @@ button:active {
 }
 
 #red {
-    background-color: #ff0000;
+  background-color: #ff0000;
 }
 
-#green{
-    background-color: green;
+#green {
+  background-color: green;
 }
 
-#blue{
-    background-color: blue;
+#blue {
+  background-color: blue;
 }
 
-#yellow{
-    background-color: yellow;
+#yellow {
+  background-color: yellow;
 }
 
-#purple{
-    background-color: purple;
+#purple {
+  background-color: purple;
 }
 
-#orange{
-    background-color: orange;
+#orange {
+  background-color: orange;
 }
 
-#cyan{
-    background-color: cyan;
+#cyan {
+  background-color: cyan;
 }
 
-#brown{
-    background-color: brown;
+#brown {
+  background-color: brown;
+}
+
+footer {
+  border: solid 10px white;
+  background: rgb(0, 83, 128, 0.8);
+  text-align: center;
+}
+#legenda {
+  text-align: justify;
+  margin: 1%;
+  padding: 1%;
+}
+#p-nero {
+  font-weight: 600;
+  background-color: aliceblue;
+}
+#p-bianco {
+  font-weight: 600;
+  background-color: #000000;
+  color: white;
+}
+
+#p-rosso {
+  font-weight: 600;
+  color: #fcfcfc;
+  background-color: #ff0000;
 }
