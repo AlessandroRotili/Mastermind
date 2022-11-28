@@ -29,6 +29,7 @@ h1 {
   width: auto;
   font-size:7ex;
   box-shadow: slateblue;
+  margin-top:5%;
 }
 #board {
   display: grid;
@@ -177,6 +178,7 @@ footer {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 5%;
     font-style: oblique;
+    padding: 5%;
+   background: none;
 }
