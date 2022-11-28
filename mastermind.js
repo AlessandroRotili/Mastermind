@@ -50,6 +50,7 @@ function displayMisterySequence() {
     
     for(let i = 0; i < misterySequenceButtons.length; i++) {
         misterySequenceButtons[i].style.backgroundColor = misterySequence[i];
+        console.log(misterySequenceButtons[i].style.backgroundColor);
     }
 }
 
@@ -89,8 +90,10 @@ function check() {
 function currentTurn() {
     var tryDiv = document.getElementById('try' + turn);
     var checkDiv = document.getElementById('check'+ turn);
-    tryDiv.style.backgroundColor = 'rgb(211, 138, 205, 0.4)';
-    checkDiv.style.backgroundColor = 'rgb(211, 138, 205, 0.4)';
+    tryDiv.style.backgroundColor = 'pink';
+    checkDiv.style.backgroundColor = 'pink';
+    // tryDiv.style.backgroundColor = 'rgb(211, 138, 205, 0.4)';
+    // checkDiv.style.backgroundColor = 'rgb(211, 138, 205, 0.4)';
     
     if(turn > 1) {
         var prevTryDiv = document.getElementById('try' + (turn - 1));
