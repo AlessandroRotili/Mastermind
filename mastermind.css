@@ -173,3 +173,10 @@ footer {
   color: #fcfcfc;
   background-color: #ff0000;
 }
+#copyright{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5%;
+    font-style: oblique;
+}
