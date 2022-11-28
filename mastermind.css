@@ -1,3 +1,9 @@
+body{
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
 #board {
   display: grid;
   grid-template-areas:
@@ -75,4 +81,36 @@ button:active {
   width: 10px;
   height: 12px;
   margin: 1px;
+}
+
+#red {
+    background-color: #ff0000;
+}
+
+#green{
+    background-color: green;
+}
+
+#blue{
+    background-color: blue;
+}
+
+#yellow{
+    background-color: yellow;
+}
+
+#purple{
+    background-color: purple;
+}
+
+#orange{
+    background-color: orange;
+}
+
+#cyan{
+    background-color: cyan;
+}
+
+#brown{
+    background-color: brown;
 }
