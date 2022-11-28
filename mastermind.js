@@ -87,10 +87,21 @@ function check() {
 }
 
 function currentTurn() {
-    var trydiv = document.getElementById('try' + turn);
-    var checkdiv = document.getElementById('check'+ turn);
-    trydiv.style.backgroundColor = 'pink';
-    checkdiv.style.backgroundColor = 'pink';
+    var tryDiv = document.getElementById('try' + turn);
+    var checkDiv = document.getElementById('check'+ turn);
+    tryDiv.style.backgroundColor = 'pink';
+    checkDiv.style.backgroundColor = 'pink';
+    
+    if(turn > 1) {
+        var prevTryDiv = document.getElementById('try' + (turn - 1));
+        var prevCheckDiv = document.getElementById('check'+ (turn - 1));
+        if (prevTryDiv.style.backgroundColor == 'pink'&&
+            prevCheckDiv.style.backgroundColor == 'pink') {
+            prevTryDiv.style.backgroundColor = 'unset';    
+            prevCheckDiv.style.backgroundColor = 'unset';    
+        }
+    }
+
 }
 
 
