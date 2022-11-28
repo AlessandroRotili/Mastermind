@@ -1,3 +1,9 @@
+body{
+    margin: 0;
+    width: 100vh;
+    box-sizing: border-box;
+}
+
 #board{
     display: grid;
     grid-template-areas:
@@ -37,5 +43,4 @@ button{
     height: 30px;
     background-color: black;
     border: 1px solid white;
-    
 }
