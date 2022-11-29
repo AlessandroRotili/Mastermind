@@ -11,168 +11,171 @@
     <header>
       <h1>MASTERMIND</h1>
     </header>
-    <div id="board">
-      <button id="btn-check">Check</button>
-      <div id="guess">
-        <button disabled></button>
-        <button disabled></button>
-        <button disabled></button>
-        <button disabled></button>
+    <div id="game-container">
+      <div id="board">
+        <button id="btn-check">Check</button>
+        <div id="guess">
+          <button disabled></button>
+          <button disabled></button>
+          <button disabled></button>
+          <button disabled></button>
+        </div>
+        <div id="options">
+          <button id="red"></button>
+          <button id="green"></button>
+          <button id="blue"></button>
+          <button id="yellow"></button>
+          <button id="purple"></button>
+          <button id="orange"></button>
+          <button id="cyan"></button>
+          <button id="brown"></button>
+        </div>
+        <div id="tries">
+          <div id="try10">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+          </div>
+          <div id="try9">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+          </div>
+          <div id="try8">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+          </div>
+          <div id="try7">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+          </div>
+          <div id="try6">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+          </div>
+          <div id="try5">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+          </div>
+          <div id="try4">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+          </div>
+          <div id="try3">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+          </div>
+          <div id="try2">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+          </div>
+          <div id="try1">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+          </div>
+        </div>
+        <div id="checks">
+          <div id="check10">
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+          </div>
+          <div id="check9">
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+          </div>
+          <div id="check8">
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+          </div>
+          <div id="check7">
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+          </div>
+          <div id="check6">
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+          </div>
+          <div id="check5">
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+          </div>
+          <div id="check4">
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+          </div>
+          <div id="check3">
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+          </div>
+          <div id="check2">
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+          </div>
+          <div id="check1">
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+            <button class="btn-check"></button>
+          </div>
+        </div>
       </div>
-      <div id="options">
-        <button id="red"></button>
-        <button id="green"></button>
-        <button id="blue"></button>
-        <button id="yellow"></button>
-        <button id="purple"></button>
-        <button id="orange"></button>
-        <button id="cyan"></button>
-        <button id="brown"></button>
-      </div>
-      <div id="tries">
-        <div id="try10">
-          <button></button>
-          <button></button>
-          <button></button>
-          <button></button>
+      <aside>
+        <h2>LEGENDA</h2>
+        <div id="legenda">
+          <div>
+            <div style="display: inline" id="p-nero">NERO:</div>
+            <p style="display: inline">colore sbagliato</p>
+          </div>
+          <div>
+            <div style="display: inline" id="p-bianco">BIANCO:</div>
+            <p style="display: inline">colore giusto, posizione sbagliata</p>
+          </div>
+          <div>
+            <div style="display: inline" id="p-rosso">ROSSO:</div>
+            <p style="display: inline">colore e posizione giusta</p>
+          </div>
         </div>
-        <div id="try9">
-          <button></button>
-          <button></button>
-          <button></button>
-          <button></button>
-        </div>
-        <div id="try8">
-          <button></button>
-          <button></button>
-          <button></button>
-          <button></button>
-        </div>
-        <div id="try7">
-          <button></button>
-          <button></button>
-          <button></button>
-          <button></button>
-        </div>
-        <div id="try6">
-          <button></button>
-          <button></button>
-          <button></button>
-          <button></button>
-        </div>
-        <div id="try5">
-          <button></button>
-          <button></button>
-          <button></button>
-          <button></button>
-        </div>
-        <div id="try4">
-          <button></button>
-          <button></button>
-          <button></button>
-          <button></button>
-        </div>
-        <div id="try3">
-          <button></button>
-          <button></button>
-          <button></button>
-          <button></button>
-        </div>
-        <div id="try2">
-          <button></button>
-          <button></button>
-          <button></button>
-          <button></button>
-        </div>
-        <div id="try1">
-          <button></button>
-          <button></button>
-          <button></button>
-          <button></button>
-        </div>
-      </div>
-      <div id="checks">
-        <div id="check10">
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-        </div>
-        <div id="check9">
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-        </div>
-        <div id="check8">
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-        </div>
-        <div id="check7">
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-        </div>
-        <div id="check6">
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-        </div>
-        <div id="check5">
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-        </div>
-        <div id="check4">
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-        </div>
-        <div id="check3">
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-        </div>
-        <div id="check2">
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-        </div>
-        <div id="check1">
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-          <button class="btn-check"></button>
-        </div>
-      </div>
+      </aside>
     </div>
-    <footer>
-      <h2>LEGENDA</h2>
-      <div id="legenda">
-        <div>
-          <div style="display: inline" id="p-nero">NERO:</div>
-          <p style="display: inline">colore sbagliato</p>
-        </div>
-        <div>
-          <div style="display: inline" id="p-bianco">BIANCO:</div>
-          <p style="display: inline">colore giusto, posizione sbagliata</p>
-        </div>
-        <div>
-          <div style="display: inline" id="p-rosso">ROSSO:</div>
-          <p style="display: inline">colore e posizione giusta</p>
-        </div>
-      </div>
-    </footer>
+
     <div id="copyright">
-      By <br>
+      By <br />
       Alessandro - Antonio - Raffaele - Aurora
     </div>
     <script src="./mastermind.js"></script>
