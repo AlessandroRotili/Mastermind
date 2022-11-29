@@ -41,13 +41,13 @@ function GenerateMisterySequence() {
     misterySequence.push(randomColor);
     myColors.splice(index, 1);
   }
-  console.log(misterySequence);
+//   console.log(misterySequence);
 }
 
 function displayMisterySequence() {
   for (let i = 0; i < misterySequenceButtons.length; i++) {
     misterySequenceButtons[i].style.backgroundColor = misterySequence[i];
-    console.log(misterySequenceButtons[i].style.backgroundColor);
+    // console.log(misterySequenceButtons[i].style.backgroundColor);
   }
 }
 
@@ -112,11 +112,11 @@ function victory() {
     .getElementById("check" + turn)
     .getElementsByTagName("button");
   for (let i = 0; i < checkButtons.length; i++) {
-    console.log(
-      window
-        .getComputedStyle(checkButtons[i])
-        .getPropertyValue("background-color") + "ciao"
-    );
+    // console.log(
+    //   window
+    //     .getComputedStyle(checkButtons[i])
+    //     .getPropertyValue("background-color") + "ciao"
+    // );
     if (
       window
         .getComputedStyle(checkButtons[i])
@@ -186,7 +186,7 @@ for (let button of optionsButtons) {
     colorSelected = window
       .getComputedStyle(button)
       .getPropertyValue("background-color");
-    console.log(colorSelected);
+    // console.log(colorSelected);
   };
 }
 
