@@ -56,10 +56,12 @@ function displayMisterySequence() {
 
 function check() {
     let tempArray = [];
+    let redCounter = 0;
     for(let i = 0; i < tryButtons.length; i++) {
         let color = window.getComputedStyle(tryButtons[i]).getPropertyValue("background-color");
         if(misterySequence[i] == color) {
             tempArray.unshift('rgb(255, 0, 0)');
+            redCounter++;
         } else {
             for(let j = 0; j < misterySequence.length; j++) {
                 if(misterySequence[j] == color && i != j) {
@@ -78,31 +80,31 @@ function check() {
         checkButtons[i].style.backgroundColor= tempArray[i];
     }
 
-    
-    if(victory()){
+    if (redCounter == 4) {
         displayMisterySequence();
     } else if (turn > 9) {
         alert('GAME-OVER');
+        redCounter = 0;
     } 
-
+    
+    // if(victory()){
+    //     displayMisterySequence();
+    // } else if (turn > 9) {
+    //     alert('GAME-OVER');
+    // } 
 }
 
 function currentTurn() {
     var tryDiv = document.getElementById('try' + turn);
     var checkDiv = document.getElementById('check'+ turn);
-    tryDiv.style.backgroundColor = 'pink';
-    checkDiv.style.backgroundColor = 'pink';
-    // tryDiv.style.backgroundColor = 'rgb(211, 138, 205, 0.4)'; non funziona il metodo d selezione qui sotto se uso questi
-    // checkDiv.style.backgroundColor = 'rgb(211, 138, 205, 0.4)';
+    tryDiv.style.backgroundColor = 'rgb(211, 138, 205, 0.4)';
+    checkDiv.style.backgroundColor = 'rgb(211, 138, 205, 0.4)';
     
     if(turn > 1) {
         var prevTryDiv = document.getElementById('try' + (turn - 1));
         var prevCheckDiv = document.getElementById('check'+ (turn - 1));
-        if (prevTryDiv.style.backgroundColor == 'pink'&&
-            prevCheckDiv.style.backgroundColor == 'pink') {
-            prevTryDiv.style.backgroundColor = 'unset';    
-            prevCheckDiv.style.backgroundColor = 'unset';    
-        }
+        prevTryDiv.style.backgroundColor = 'unset';    
+        prevCheckDiv.style.backgroundColor = 'unset';    
     }
 
 }
@@ -110,7 +112,6 @@ function currentTurn() {
 
 function victory(){
     checkButtons = document.getElementById('check'+ turn).getElementsByTagName('button');
-    console.log(checkButtons);
     for(let i = 0; i < checkButtons.length; i++) {
         console.log(window.getComputedStyle(checkButtons[i]).getPropertyValue("background-color")+ 'ciao'); 
         if(window.getComputedStyle(checkButtons[i]).getPropertyValue("background-color") != 'rgb(255, 0, 0)') {

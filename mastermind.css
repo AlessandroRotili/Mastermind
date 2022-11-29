@@ -4,21 +4,33 @@
 
 body {
   margin: 0;
-  height: 100vh;
+  height: 80vh;
+  width: 100vw;
   box-sizing: border-box;
   background-image: url(https://secretlabinstitute.files.wordpress.com/2021/02/galaxy-brain-m-stage-3.png?w=1200);
+  background-color: #5500ff;
   background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto 100%;
   font-family: "Sono", sans-serif;
 }
-
-header{
-    display: flex;
-    background-color: #5500ff;
-    height: 10%;
-    align-items: baseline;
-    border-bottom: solid #000000;
-    justify-content: center;
-    align-items: center;
+#game-container {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  justify-items: center;
+}
+header {
+  display: flex;
+  background-color: #5500ff;
+  height: 10%;
+  align-items: baseline;
+  border-bottom: solid #000000;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -26,11 +38,14 @@ h1 {
   text-align: center;
   margin-bottom: 5%;
   width: auto;
-  font-size:7ex;
+  font-size: 7ex;
   box-shadow: slateblue;
-  margin-top:5%;
+  margin-top: 5%;
 }
 #board {
+  /* width: 70%; */
+  margin: auto;
+  max-width: 300px;
   display: grid;
   grid-template-areas:
     "guess ."
@@ -148,15 +163,21 @@ button:active {
   background-color: brown;
 }
 
-footer {
+aside {
+  margin: auto;
+  width: 50vw;
+  min-width: 300px;
   border: solid 10px white;
   background: rgb(0, 83, 128, 0.8);
   text-align: center;
 }
 #legenda {
-  text-align: justify;
+  text-align: left;
   margin: 1%;
   padding: 1%;
+}
+h2 {
+  margin: 1%;
 }
 #p-nero {
   font-weight: 600;
@@ -173,11 +194,11 @@ footer {
   color: #fcfcfc;
   background-color: #ff0000;
 }
-#copyright{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-style: oblique;
-    padding: 5%;
-   background: none;
+#copyright {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-style: oblique;
+  padding: 1%;
+  background: none;
 }
